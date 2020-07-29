@@ -1,0 +1,22 @@
+{
+    "name": "u01jmg3/docx2md",
+    "description": "Convert Microsoft Word files (.docx) to Markdown files (.md)",
+    "homepage": "https://github.com/u01jmg3/docx2md",
+    "keywords": [
+        "docx",
+        "md",
+        "markdown",
+        "conversion"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Goode",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.9"
+    }
+}

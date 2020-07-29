@@ -4,7 +4,7 @@
  * This PHP class will read a Word file (*.docx), parse it and return a
  * markdown file.
  *
- * PHP 5 (≥ 5.3.0)
+ * PHP 5 (≥ 5.3.9)
  *
  * @author  Jonathan Goode <https://github.com/u01jmg3>
  * @license http://www.opensource.org/licenses/mit-license.php MIT License
