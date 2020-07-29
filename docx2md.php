@@ -6,7 +6,7 @@
  *
  * PHP 5 (≥ 5.3.0)
  *
- * @author  Jonathan Goode <https://github.com/u01jmg3>, Mathieu Bouchard <https://github.com/matb33>
+ * @author  Jonathan Goode <https://github.com/u01jmg3>
  * @license http://www.opensource.org/licenses/mit-license.php MIT License
  * @version 1.0.5
  */

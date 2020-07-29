@@ -4,7 +4,7 @@ docx2md is an open source project. It is licensed under the [MIT license](https:
 We appreciate pull requests, here are our guidelines:
 
 1. Firstly, check if your issue is present within the latest version (`dev-master`) as the problem may already have been fixed.
-1. Log a bug in our [issue tracker](https://github.com/matb33/docx2md/issues) (if there isn't one already).
+1. Log a bug in our [issue tracker](https://github.com/u01jmg3/docx2md/issues) (if there isn't one already).
    - If your patch is going to be large it might be a good idea to get the discussion started early.
      - We are happy to discuss it in an issue beforehand.
    - If you could provide the .docx file it is extremely useful for debugging
