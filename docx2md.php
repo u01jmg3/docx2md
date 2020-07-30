@@ -67,12 +67,12 @@ class Docx2md
     /**
      * Constructor
      *
-     * @param  array $argv
+     * @param  mixed $argv
      * @return void
      */
-    public function __construct(array $argv = array())
+    public function __construct($argv = array())
     {
-        $this->isClient = (php_sapi_name() === self::PHP_SAPI_NAME) ?: false;
+        $this->isClient = (PHP_SAPI === self::PHP_SAPI_NAME) ?: false;
 
         if (!empty($argv)) {
             $this->docx2md($argv);
@@ -115,7 +115,7 @@ class Docx2md
             $shortOptionsArray = array_map(function ($value) {
                 return substr($value, 0, 1) . preg_replace('/[a-zA-Z0-9]/', '', $value);
             }, $longOptionsArray);
-            $shortOptions = implode($shortOptionsArray);
+            $shortOptions = implode('', $shortOptionsArray);
 
             $options = getopt($shortOptions, $longOptionsArray);
 
@@ -162,7 +162,7 @@ class Docx2md
 
         // Remove all options from the list of arguments
         $args = array_filter($args, function ($value) {
-            return (substr($value, 0, 1) === '-') === false;
+            return substr($value, 0, 1) !== '-';
         });
 
         // Re-index the array
@@ -222,7 +222,7 @@ class Docx2md
         $docxFilename = null;
         $mdFilename   = null;
 
-        foreach ($args as $index => $arg) {
+        foreach (array_keys($args) as $index) {
             if ($index === 0) {
                 $docxFilename = $args[$index];
             } elseif ($index === 1) {
@@ -1152,6 +1152,6 @@ XML
 }
 
 // Create class automagically when executed on the command line
-if (php_sapi_name() === Docx2md::PHP_SAPI_NAME) {
+if (isset($argv) && PHP_SAPI === Docx2md::PHP_SAPI_NAME) {
     new Docx2md($argv);
 }
